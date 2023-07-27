@@ -3,25 +3,41 @@ package co.edu.uptc.model;
 import co.edu.uptc.presenter.Contract;
 
 public class ControlModel implements Contract.Model{
+	public List list;
+	
     private Contract.Presenter presenter;
     @Override
     public void setPresenter(Contract.Presenter presenter) {
         this.presenter = presenter;
     }
-    
-    public void setValue(Object value) {
-    	Node node = new Node(value);
-	}
-    
-    public void insert() {
+
+	@Override
+	public void addBefore(Node node) {
+		getList().addBefore(node);
 		
 	}
 
-    public void add() {
+	@Override
+	public void addAfter(Node node) {
+		getList().addAfter(node);
 		
 	}
-    
-    public void remove() {
+
+	@Override
+	public void removeIndex(int index) {
+		getList().removeIndex(index);
+		
+	}
+
+	@Override
+	public void removeRepeat() {
+		getList().removeRepeat();
 		
 	} 
+	
+	public List getList() {
+		return list;
+	}
+	
+	
 }

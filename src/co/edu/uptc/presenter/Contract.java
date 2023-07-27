@@ -1,5 +1,7 @@
 package co.edu.uptc.presenter;
 
+import co.edu.uptc.model.Node;
+
 public interface Contract {
     public interface Presenter{
         void setModel(Model model);
@@ -10,6 +12,10 @@ public interface Contract {
 
     public interface Model{
         void setPresenter(Presenter presenter);
+        void addBefore(Node node);
+        void addAfter(Node node);
+        void removeIndex(int index);
+        void removeRepeat();
     }
 
     public interface View{

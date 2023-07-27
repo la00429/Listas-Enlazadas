@@ -15,7 +15,7 @@ public class List {
 // aquí hay que recorrer toda la lista, encontrar el final y añadirlo. 
 	}
 
-	private void removeIndex(int index) {
+	public void removeIndex(int index) {
 		// Se recorre toda la lista con un contador por ciclo y dentro un condicional.
 		//se asigna el apuntador. 
 		//java, trash.
@@ -29,7 +29,7 @@ public class List {
 
 	}
 
-	private void removeRepeat() {
+	public void removeRepeat() {
 //		se recorre la lista 
 
 	}
